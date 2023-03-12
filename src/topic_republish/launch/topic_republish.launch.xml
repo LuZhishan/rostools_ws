@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<launch>
+    <node pkg="topic_republish" exec="sub_pub" name="change_frame" output="screen">
+        <param name="sub_topic_name" value="/rslidar"/>
+        <param name="pub_topic_name" value="/rslidar_points"/>
+        <param name="use_topic_time" value="true"/>
+        <param name="sub_qos_param" value="reliable"/>
+        <param name="pub_qos_param" value="best_effort"/>
+    </node>
+</launch>
