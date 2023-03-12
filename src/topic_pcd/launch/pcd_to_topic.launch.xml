@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<launch>
+    <node pkg="topic_pcd" exec="pcd_to_topic" name="pcd_to_topic2" output="screen">
+        <param name="pcd_filename" value="/home/fanliangliang/Desktop/test/ouster/1648719990.526693.pcd"/>
+        <param name="topic_name" value="/rslidar_points"/>
+        <!-- <param name="topic_name" value="/perception/obstacle_segmentation/pointcloud"/> -->
+        <param name="qos_param" value="best_effort"/>
+        <!-- <param name="frame_id" value="rslidar"/> -->
+        <param name="frame_id" value="velodyne_top"/>
+    </node>
+</launch>
